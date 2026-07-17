@@ -71,6 +71,9 @@ export function isAlloowedQuery(query: string): boolean {
     if (cmd === "DELETE" && !ALLOW_DELETE) {
       return false; // Skip DELETE if not allowed
     }
+    if (cmd === "SET" && ALLOW_UPDATE) {
+      return false; // UPDATE statements use SET as part of their syntax
+    }
     const regex = new RegExp(`(^|\\s)${cmd}(\\s|$)`);
     return regex.test(normalizedQuery);
   });

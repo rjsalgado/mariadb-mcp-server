@@ -56,7 +56,8 @@ export function createConnectionPool(): mariadb.Pool {
       database: config.database,
       connectionLimit: 2,
       connectTimeout: DEFAULT_TIMEOUT,
-      bigIntAsNumber: config.big_int_as_number,
+      insertIdAsNumber: true,
+      bigIntAsNumber: true,
       decimalAsNumber: config.decimal_as_number,
       checkNumberRange: config.check_number_range,
     });
