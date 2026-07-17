@@ -2,7 +2,7 @@
  * MariaDB connection management for MCP server
  */
 
-import mariadb from "mariadb";
+import * as mariadb from "mariadb";
 import { MariaDBConfig } from "./types.js";
 import { isAlloowedQuery } from "./validators.js";
 

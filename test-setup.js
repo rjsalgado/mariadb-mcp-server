@@ -21,7 +21,7 @@
  *   MARIADB_ALLOW_DELETE - false
  */
 
-import mariadb from 'mariadb';
+import * as mariadb from 'mariadb';
 import * as dotenv from 'dotenv';
 
 // Load environment variables from .env file
